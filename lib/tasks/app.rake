@@ -3,7 +3,7 @@ namespace :app do
     exec "rails s -d"
   end
 
-  task :stop => :environemnt do
+  task :stop => :environment do
     pid = File.read(Rails.root.to_s + "/tmp/pids/unicorn.pids")
     exec "kill #{pid}"
   end
