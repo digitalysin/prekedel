@@ -27,3 +27,7 @@ gem 'capistrano'
 gem 'mailcatcher'
 gem 'slim-rails'
 gem 'carrierwave'
+
+group :production do
+  gem 'unicorn'
+end
