@@ -23,7 +23,6 @@ end
 
 gem 'jquery-rails'
 gem 'jbuilder'
-gem 'capistrano'
 gem 'mailcatcher'
 gem 'slim-rails'
 gem 'carrierwave'
@@ -31,3 +30,5 @@ gem 'carrierwave'
 group :production do
   gem 'unicorn'
 end
+
+gem 'mina'

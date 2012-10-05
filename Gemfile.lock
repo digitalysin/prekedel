@@ -31,12 +31,6 @@ GEM
     arel (3.0.2)
     bootstrap-sass (2.1.0.0)
     builder (3.0.3)
-    capistrano (2.13.4)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
     carrierwave (0.6.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -76,7 +70,6 @@ GEM
       spork (>= 0.8.4)
       sys-proctable
     haml (3.1.7)
-    highline (1.6.15)
     hike (1.2.1)
     i18n (0.6.1)
     jbuilder (0.8.0)
@@ -85,7 +78,6 @@ GEM
     jquery-rails (2.1.3)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
-    jruby-pageant (1.1.1)
     json (1.7.5)
     kgio (2.7.4)
     listen (0.5.3)
@@ -103,16 +95,12 @@ GEM
       sqlite3 (~> 1.3)
       thin (~> 1.5.0)
     mime-types (1.19)
+    mina (0.2.1)
+      open4
+      rake
     multi_json (1.3.6)
     mysql2 (0.3.11)
-    net-scp (1.0.4)
-      net-ssh (>= 1.99.1)
-    net-sftp (2.0.5)
-      net-ssh (>= 2.0.9)
-    net-ssh (2.6.0)
-      jruby-pageant (>= 1.1.1)
-    net-ssh-gateway (1.1.0)
-      net-ssh (>= 1.99.1)
+    open4 (1.3.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -208,7 +196,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
-  capistrano
   carrierwave
   coffee-rails (~> 3.2.1)
   database_cleaner
@@ -219,6 +206,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mailcatcher
+  mina
   mysql2
   rails (= 3.2.8)
   rspec-rails
