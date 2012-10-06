@@ -8,11 +8,11 @@
 # timeout 60
 
 
-server_path = "/var/server/online-shop/current"
-working_directory server_path
-pid "/tmp/unicorn.pid"
-stderr_path "/tmp/log/unicorn-error.log"
-stdout_path "/tmp/log/unicorn.log"
-listen "/tmp/unicorn.sock"
+# server_path = "/var/server/online-shop/current"
+# working_directory server_path
+pid "tmp/pids/unicorn.pid"
+# stderr_path "tmp/log/unicorn-error.log"
+# stdout_path "tmp/log/unicorn.log"
+listen "/tmp/unicorn.online.shop.sock"
 worker_processes 3
 timeout 60

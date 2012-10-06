@@ -32,3 +32,10 @@ group :production do
 end
 
 gem 'mina'
+gem 'acts_as_commentable_with_threading'
+gem 'kaminari'
+gem 'likeable'
+gem 'activeadmin'
+gem 'ancestry'
+gem 'rmagick'
+gem 'sorcery'

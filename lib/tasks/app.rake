@@ -4,7 +4,7 @@ namespace :app do
   end
 
   task :stop => :environment do
-    pid = File.read(Rails.root.to_s + "/tmp/pids/unicorn.pids")
+    pid = File.read(Rails.root.to_s + "/tmp/pids/server.pids")
     exec "kill #{pid}"
   end
 

@@ -1,0 +1,31 @@
+= form_for @user, html: { multipart: true} do |f|
+  - if @user.errors.present?
+    div.alert.alert-error
+      ul
+        - @user.errors.full_messages.each do |m|
+          li = m
+  div
+    = f.label :first_name
+    br
+    = f.text_field :first_name
+  div
+    = f.label :last_name
+    br
+    = f.text_field :last_name
+  div
+    = f.label :username
+    br
+    = f.text_field :username
+  div
+    = f.label :email
+    br
+    = f.text_field :email
+  div
+    = f.label :password
+    br
+    = f.password_field :password
+  div
+    = f.label :password_confirmation
+    br
+    = f.password_field :password_confirmation
+

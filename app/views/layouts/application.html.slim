@@ -5,5 +5,11 @@ html
     = stylesheet_link_tag :application, media: :all
     = csrf_meta_tags
   body class="#{controller_name}"
+    - if flash[:error]
+      div.alert.alert-error = flash[:error]
+    - if flash[:notice]
+      div.alert.alert-success = flash[:notice]
+    - if flash[:alert]
+      div.alert.alert = flash[:alert]
     = yield
     = javascript_include_tag :application
