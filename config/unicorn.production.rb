@@ -13,6 +13,6 @@
 pid "tmp/pids/unicorn.pid"
 # stderr_path "tmp/log/unicorn-error.log"
 # stdout_path "tmp/log/unicorn.log"
-listen "/var/server/online-shop/tmp/sockets/unicorn.online.shop.sock"
+listen "/var/server/prekedel/tmp/sockets/unicorn.online.shop.sock"
 worker_processes 1
 timeout 60
