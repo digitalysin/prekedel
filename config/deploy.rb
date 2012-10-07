@@ -88,9 +88,9 @@ require 'mina/rbenv'
 
 set :domain, '49.0.5.59'
 set :deploy_to, '/var/server/'
-set :repository, 'git://github.com/digitalysin/online-shop.git'
+set :repository, 'git://github.com/digitalysin/prekedel.git'
 set :branch, 'master'
-set :application_name, 'online-shop'
+set :application_name, 'prekedel'
 
 set :user, :deployer
 
@@ -123,18 +123,19 @@ namespace :app do
     invoke :working_directory
     queue "git pull origin master"
     queue "bundle install"
+    queue "bundle exec rake db:drop && rake db:setup"
     queue "bundle exec rake db:migrate"
 
   end
 
   task :start => :environment do
     invoke :working_directory
-    queue "bundle exec rails s -d"
+    queue "bundle exec unicorn -c config/unicorn.production.rb -D"
   end
 
   task :stop => :environment do
     invoke :working_directory
-    queue %[ruby -e 'pid=File.read("tmp/pids/server.pid"); puts "#{pid}"']
+    queue %[ruby -e 'Process.kill("QUIT", File.read("tmp/pids/unicorn.pid").to_i)']
   end
 
 end
